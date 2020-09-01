@@ -99,16 +99,16 @@ export const header = state => {
       return {
         showCover: true,
         coverImage: null,
-        title: category(state),
-        description: `A collection of ${state.posts.length} ${state.posts.length === 1 ? 'post' : 'posts'}`
+        title: category(state) ? `Category "${category(state) }"` : null,
+        description: `Showing ${state.posts.length} results`
       }
 
     case 'tags':
       return {
         showCover: true,
         coverImage: null,
-        title: tag(state),
-        description: `A collection of ${state.posts.length} ${state.posts.length === 1 ? 'post' : 'posts'}`
+        title: tag(state) ? `Tag "${tag(state)}"` : null,
+        description: `Showing ${state.posts.length} results`
       }
 
     case 'posts':
@@ -116,7 +116,7 @@ export const header = state => {
         showCover: true,
         coverImage: null,
         title: `Posts`,
-        description: `A collection of ${state.posts.length} ${state.posts.length === 1 ? 'post' : 'posts'}`
+        description: `Showing ${state.posts.length} results`
       }
 
     case 'home':

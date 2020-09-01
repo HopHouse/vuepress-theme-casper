@@ -1,8 +1,8 @@
 <template>
   <main id="site-main" class="site-main outer">
-    <div class="inner posts">
+    <div class="inner">
       <div class="post-feed">
-        <card v-for="(post, index) in posts" :post="post" :key="index" :large="!index % 6" />
+        <card v-for="(post, index) in posts" :post="post" :key="index" />
       </div>
     </div>
   </main>
@@ -18,3 +18,7 @@
     computed: mapGetters(['posts'])
   }
 </script>
+
+<style lang="scss">
+  @import '../styles/post-feed';
+</style>
