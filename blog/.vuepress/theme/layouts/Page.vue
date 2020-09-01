@@ -314,7 +314,7 @@
     overflow-x: auto;
     margin: 1.5em 0 3em;
     padding: 20px;
-    max-width: 100%;
+    width: 100%;
     border: darken($darkgrey, 10%) 1px solid;
     color: $whitegrey;
     font-size: 1.4rem;
