@@ -64,16 +64,79 @@ export default {
 }
 </script>
 
-<style>
-  @import './styles/global.css';
-  @import './styles/screen.css';
-  
-  @import '~prismjs/themes/prism-tomorrow.css';
+<style lang="scss">
+  @import './styles/reset';
+  @import './styles/defaults';
 
-  /* Code section
+  /* 1. Global - Set up the things
   /* ---------------------------------------------------------- */
-  div[class^="language-"] {
-    min-width: 100%;
-    max-width: 100%;
+
+  body {
+    background: #f4f8fb;
   }
+
+  .img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 100%;
+  }
+
+  .hidden {
+    visibility: hidden;
+    position: absolute;
+    text-indent: -9999px;
+  }
+
+
+  /* 2. Layout - Page building blocks
+  /* ---------------------------------------------------------- */
+
+  .site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .site-main {
+    z-index: 90;
+    flex-grow: 1;
+  }
+
+  /* Full width page blocks */
+  .outer {
+    position: relative;
+    padding: 0 4vw;
+  }
+
+  /* Centered content container blocks */
+  .inner {
+    margin: 0 auto;
+    max-width: 1040px;
+    width: 100%;
+  }
+
+  /* 3. Special Template Styles
+  /* ---------------------------------------------------------- */
+  @media (min-width: 900px) {
+    .home-template,
+    .category-template,
+    .tags-template,
+    .posts-template,
+    .author-template {
+      .post-feed {
+        margin-top: -70px;
+        padding-top: 0;
+      }
+
+      .site-nav {
+        position: relative;
+        top: -70px;
+      }
+    }
+
+  }
+
 </style>

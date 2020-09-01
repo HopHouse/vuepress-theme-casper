@@ -1,7 +1,6 @@
 const config = require('./data/config.json');
-const base = process.env.BASE ? { base: process.env.BASE } : {}
 
-module.exports = Object.assign(config, base, {
+module.exports = Object.assign(config, {
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }]
   ],
