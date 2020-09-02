@@ -67,7 +67,8 @@ export default {
 <style lang="scss">
   @import './styles/reset';
   @import './styles/defaults';
-
+  @import '~prismjs/themes/prism-tomorrow.css';
+  
   /* 1. Global - Set up the things
   /* ---------------------------------------------------------- */
 
