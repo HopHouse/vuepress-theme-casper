@@ -69,16 +69,8 @@ export default {
         this.current.publish && new Date(this.current.publish).toISOString()
       );
     },
-
-  export default {
-    computed: {
-      ...mapGetters(['current']),
-
-      datetime () {
-        return new Date(this.current.publish).toISOString()
-      },
-
-      localeDate () {
+    
+    localeDate () {
         return new Date(this.current.publish).toLocaleDateString()
       },
 
@@ -93,6 +85,7 @@ export default {
     striptags,
     authorImage
   }
+}
 </script>
 
 <style lang="scss">

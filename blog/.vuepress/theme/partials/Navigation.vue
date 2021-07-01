@@ -42,6 +42,7 @@ export default {
       return this.type === "home";
     }
   }
+}
 </script>
 
 <style lang="scss">
